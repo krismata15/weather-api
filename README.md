@@ -19,7 +19,7 @@ Backend que se conecta a los servicios de [https://openweathermap.org/api]() par
 
 ## Para ejecutar
 
-Luego clonar el proyecto y tener la versión correcta de Laravel instalada de forma global o local, ejecutar.
+Luego de clonar el proyecto y tener la versión correcta de Laravel instalada de forma global o local, ejecutar.
 
 ```sh
 composer install
