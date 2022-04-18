@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    image: kdata/laravel-api
+    container_name: laravel-api
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
