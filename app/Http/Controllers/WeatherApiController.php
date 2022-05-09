@@ -9,10 +9,20 @@ use Illuminate\Support\Facades\Http;
 class WeatherApiController extends Controller
 {
 
-    private $baseUrl = "api.openweathermap.org/data/2.5";
-    private $apiKey = "28e5ced723e59780943c5b42ed738095";
-    private $units = 'metric';
-    private $lang = 'es';
+    private $baseUrl;
+    private $apiKey;
+    private $units;
+    private $lang;
+
+
+    public function __construct()
+    {
+        $this->baseUrl = env('BASE_WEATHER_URL');
+        $this->apiKey = env('WEATHER_API_KEY');
+        $this->units = env('WEATHER_DEFAULT_UNITS');
+        $this->lang = env('WEATHER_DEFAULT_LANG');
+
+    }
 
     /**
      * Result for single city query with basic information.
